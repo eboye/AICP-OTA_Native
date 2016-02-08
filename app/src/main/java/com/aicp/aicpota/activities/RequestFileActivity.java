@@ -62,8 +62,6 @@ public class RequestFileActivity extends Activity {
         PackageManager packageManager = getPackageManager();
         Intent test = new Intent(Intent.ACTION_GET_CONTENT);
         test.setType("application/zip*");
-//        List<ResolveInfo> list = packageManager.queryIntentActivities(test,
-//                PackageManager.GET_ACTIVITIES);
         List<PackageInfo> list = packageManager.getInstalledPackages(PackageManager.GET_ACTIVITIES);
         if (list.size() > 0) {
             Intent intent = new Intent();
